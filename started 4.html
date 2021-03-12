@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+          rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Subscribie website</title>
+</head>
+
+<body class="shop">
+<div class="page-container w-100 d-flex justify-content-center align-items-center">
+    <div class="content-container position-relative">
+
+        <div class="go-back">
+            <span class="go-back-icon"><</span>
+        </div>
+
+        <div class="row page-title">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <h1>Subscribe</h1>
+            </div>
+        </div>
+
+        <div class="content mb-4">
+
+            <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                    <h2>What kind of website do you want ?</h2>
+                </div>
+            </div>
+
+
+            <div class="row options d-flex justify-content-center align-items-center">
+                <div class="option col-sm-6 col-md-3">
+                    <p class="selected-option">Beauty</p>
+                </div>
+                <div class="option col-sm-6 col-md-3">
+                    <p class="selected-option">Beauty</p>
+                </div>
+                <div class="option col-sm-6 col-md-3">
+                    <p class="selected-option">Beauty</p>
+                </div>
+                <div class="option col-sm-6 col-md-3">
+                    <p class="selected-option">Beauty</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-input">
+                            <input class="form-control" placeholder="Business Name" type="text">
+                        </div>
+                        <div class="form-input">
+                            <input class="form-control" placeholder="First Name" type="text">
+                        </div>
+                        <div class="form-input">
+                            <input class="form-control" placeholder="Packadge or Service" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-input">
+                            <input class="form-control" placeholder="Business Email" type="email">
+                        </div>
+                        <div class="form-input">
+                            <input class="form-control" placeholder="Surname" type="text">
+                        </div>
+                        <div class="form-input upload position-relative">
+                            <input class="form-control" id="selectedFile" placeholder="Upload Business Logo"
+                                   type="file"/>
+                            <span class="upload-input-text" id="upload-text">Upload a logo...</span>
+                            <button class="upload-file-btn" onclick="selectFile()">
+                                <img height="25px" id="upload-icon" src="img/icons/upload.png" width="25px">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row pb-2 pt-2">
+                    <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                        <span class="pricing">
+                            Pricing
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="check">
+
+                            <div class="check-i">
+                                <div class="check_content">
+                                    <label class="container-box">
+                                        Recurring Price
+                                        <input checked="checked" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="check-i">
+                                <div class="check_content">
+                                    <label class="container-box">
+                                        One-Off Price
+                                        <input checked="checked" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button pt-4 py-4">
+                    <a class="btn btn-sub" href="">Continue </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    /**
+     * This js code is used for upload file styling
+     */
+    const uploadInput = document.getElementById('selectedFile');
+    const uploadText = document.getElementById('upload-text');
+    const uploadIcon = document.getElementById('upload-icon');
+
+    selectFile = () => {
+        if (!uploadInput.value) {
+            uploadInput.click();
+
+            uploadInput.addEventListener('change', (event) => {
+                if (event.target.value) {
+                    uploadText.innerHTML = (event.target.value).substring(12, event.target.value.length);
+                    uploadIcon.setAttribute('src', 'img/icons/letter-x.png');
+                }
+            })
+        } else {
+            uploadInput.value = '';
+            uploadText.innerHTML = 'Upload a logo...';
+            uploadIcon.setAttribute('src', 'img/icons/upload.png');
+        }
+    }
+</script>
+
+</body>
+
+</html>
