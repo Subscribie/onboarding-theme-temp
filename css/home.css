@@ -42,7 +42,7 @@ button {
 }
 
 .navbar-brand, .nav-link {
-    color: white !important;
+    color: white;
 }
 
 .get-started-btn {
@@ -168,6 +168,137 @@ footer img {
     font-weight: 400;
 }
 
+
+.color-primary {
+    background: #4b96ff !important;
+    color: white !important;
+}
+
+.text-color-primary {
+    color: #588cfd !important;
+}
+
+.menu-link:hover {
+    color: red !important;
+}
+
+.nav-link.inverted {
+    color: #707070;
+}
+
+.dashboard-bg {
+    background: #ededed;
+}
+
+.dashboard-content {
+    padding-top: 3rem;
+}
+
+.dashboard-content .settings-page-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.table-line {
+    background: #fff;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 19px -2px rgba(12, 48, 99, 0.15);
+    box-shadow: 0px 0px 19px -2px rgba(12, 48, 99, 0.15);
+    margin: 1rem 0 !important;
+}
+
+.product-title {
+    font-weight: 500;
+}
+
+.item-status.active {
+    color: #83e396 !important;
+    font-weight: 500;
+}
+
+.item-status.inactive {
+    color: #d80027 !important;
+    font-weight: 500;
+}
+
+.settings-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.edit-icon {
+    background: #568dfd;
+}
+
+.edit-icon:hover {
+    background: #6f9fff;
+}
+
+.delete-icon {
+    background: #d80027;
+}
+
+.delete-icon:hover {
+    background: #e90932;
+}
+
+.toggle-switch, .toggle-switch .toggle-knob {
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.toggle-switch {
+    height: 30px;
+    min-width: 55px;
+    display: inline-block;
+    background-color: #ededed;
+    margin: 2px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid 1px #ededed;
+    box-shadow: inset 1px 1px 9px -3px rgba(4, 4, 4, 0.08), 1px 2px 6px -2px rgba(0, 0, 0, 0.01);
+}
+
+.toggle-switch .toggle-knob {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #fff;
+    border: solid 1px rgba(126, 126, 126, 0.07);
+    box-shadow: 0 1px 3px rgba(107, 106, 106, 0.26), 0 5px 1px rgba(107, 106, 106, 0.13);
+    border-radius: 26px;
+    margin: -1px 1px;
+}
+
+.toggle-switch.active {
+    background-color: #ededed;
+    border: solid 1px transparent;
+}
+
+.toggle-switch.active .toggle-knob {
+    margin-left: 24px;
+    background-color: #77e189;
+}
+
+.item-type-mob {
+    display: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 3px;
@@ -204,6 +335,22 @@ footer img {
         padding: 0.5rem 1rem !important;
         border-radius: 24px;
     }
+
+    .navbar-brand {
+        width: 40% !important;
+    }
+
+    .navbar-nav {
+        width: 100% !important;
+    }
+
+    .nav-item, .user-details {
+        padding: 0.5rem 2rem !important;
+    }
+
+    .table-line {
+        padding: 2rem 1rem !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -221,5 +368,24 @@ footer img {
 
     .footer-section {
         padding: 2rem 0 !important;
+    }
+
+    .product-title {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .title-description {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .item-type-mob {
+        display: flex;
+    }
+
+    .table-header {
+        display: none;
+    !important;
     }
 }
